@@ -23,8 +23,14 @@ jar {
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
+    //https://bintray.com/bintray/jcenter/
     // You can declare any Maven/Ivy/file repository here.
+    //mavenCentral()
     jcenter()
+    
+    //maven {
+    //	url "http://search.maven.org"
+    //}
 }
 
 // In this section you declare the dependencies for your production and test code
@@ -37,6 +43,8 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+    compile 'com.jolira:rhino:1.7.3.1'
+    compile 'net.sourceforge.htmlunit:htmlunit:2.23'
 }
 
 test {
