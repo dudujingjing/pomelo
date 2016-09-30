@@ -10,3 +10,4 @@ crawler/.settings/*
 */app/*.map
 *.log
 */bower_components/
+DswLinks/typings/

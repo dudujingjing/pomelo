@@ -1,36 +1,19 @@
 import { Component } from '@angular/core';
-import { LinkObject } from './link-object'
 
-const LINKOBJS: LinkObject[] = [
-    {
-        appName: 'Customer Login:',
-        nickName: 'Customer',
-        prodUrl: 'https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        psUrl: 'https://www-112ps.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        psDstUrl: 'https://www-112ps.bld.dst.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        uatUrl: 'https://www-112uat.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/"',
-        fvtUrl: 'https://www-112fvt.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        preProdUrl: 'https://www-112preprod.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        devprUrl: 'https://www-112dev.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        localUrl: 'http://webauth.ibm.com/passport'
-    },
-    {
-        appName: 'Customer Login:',
-        nickName: 'Customer',
-        prodUrl: 'https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        psUrl: 'https://www-112ps.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        psDstUrl: 'https://www-112ps.bld.dst.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        uatUrl: 'https://www-112uat.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/"',
-        fvtUrl: 'https://www-112fvt.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        preProdUrl: 'https://www-112preprod.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        devprUrl: 'https://www-112dev.etl.ibm.com/software/howtobuy/passportadvantage/paocustomer/',
-        localUrl: 'http://webauth.ibm.com/passport'
-    }
-];
+import { LinkObject } from './link-object'
+//import { LinkObjectService } from './link-object.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app/link-list.component.html',
+    template: `
+      <h1>{{title}}</h1>
+      <nav>
+        <a routerLink="/links">Links</a>
+        <a routerLink="/dashboard">Dashboard</a>
+      </nav>
+      <router-outlet></router-outlet>
+      `,
     styles: [`
     .bs-example {
       position: relative;
@@ -40,12 +23,11 @@ const LINKOBJS: LinkObject[] = [
       border-style: solid;
       border-width: 1px 0;
       -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-      box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+      border-radius: 5px;
+      box-shadow: 0 2px 8px #999;
     }
     `]
 })
 export class AppComponent {
     title = 'DSW links';
-    linkObjArr = LINKOBJS;
-
 }
