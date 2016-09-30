@@ -1,4 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
+import { LinkObjectService } from './link-object.service';
+import { LinkObject } from './link-object'
 
 @Component({
   moduleId: module.id,
@@ -6,9 +8,9 @@ import { Component } from '@angular/core'
   templateUrl: 'link-list.component.html',
   providers: [ LinkObjectService ]
 })
-export class LinkeListComponent() implements OnInit{
-  links: AppLinkObj[];
-  selectedLink: AppLinkObj;
+export class LinkeListComponent implements OnInit{
+  links: LinkObject[];
+  selectedLink: LinkObject;
 
   constructor(private service: LinkObjectService){  }
 
@@ -16,7 +18,7 @@ export class LinkeListComponent() implements OnInit{
     this.links = this.service.getLinkObjs();
   }
 
-  selectLink(link: AppLinkObj) {
+  selectLink(link: LinkObject) {
     this.selectedLink = link;
   }
 }

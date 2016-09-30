@@ -1,19 +1,7 @@
 import { Component } from '@angular/core';
+import { LinkObject } from './link-object'
 
-export class AppLinkObj {
-    appName: string;
-    nickName: string;
-    prodUrl: string;
-    psUrl: string;
-    psDstUrl: string;
-    uatUrl: string;
-    fvtUrl: string;
-    preProdUrl: string;
-    devprUrl: string;
-    localUrl: string;
-};
-
-const LINKOBJS: AppLinkObj[] = [
+const LINKOBJS: LinkObject[] = [
     {
         appName: 'Customer Login:',
         nickName: 'Customer',

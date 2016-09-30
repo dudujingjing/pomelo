@@ -1,4 +1,4 @@
-export class AppLinkObj {
+export class LinkObject {
     appName: string;
     nickName: string;
     prodUrl: string;

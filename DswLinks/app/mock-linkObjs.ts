@@ -1,1 +1,1 @@
-import { AppLinkObj } from './appLinkObj'
+import { LinkObject } from './link-object'
