@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+      .left_container {
+        margin: 10px 30% 0 15px;
+        font-family: Arial;
+      }
+    </style>
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -18,6 +24,9 @@
   </head>
   <!-- 3. Display the application -->
   <body>
+    <div class="left_container">
     <my-app>Loading...</my-app>
+    </div>
   </body>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
 </html>

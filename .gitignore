@@ -9,3 +9,4 @@ crawler/.settings/*
 */app/*.js
 */app/*.map
 *.log
+*/bower_components/
