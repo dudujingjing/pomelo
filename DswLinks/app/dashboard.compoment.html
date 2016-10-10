@@ -1,0 +1,8 @@
+<h3>hot links</h3>
+<div>
+  <div *ngFor='let linkObj of links' (click)='gotoDetail(linkObj)'>
+    <div>
+      <h4>{{linkObj.nickName}}</h4>
+    </div>
+  </div>
+</div>
