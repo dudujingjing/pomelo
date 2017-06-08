@@ -10,4 +10,5 @@ crawler/.settings/*
 */app/*.map
 *.log
 */bower_components/
+**/node_modules/
 DswLinks/typings/

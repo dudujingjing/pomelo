@@ -1,0 +1,22 @@
+<html lang="en">
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="./main.css"></link>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="./node_modules/marked/lib/marked.js"></script>
+	<script src="./node_modules/underscore/underscore.js"></script>
+	<title>Markdown Editor</title>
+	</head>
+
+	<body>
+		
+		<div id="editor">
+		  <textarea :value="input" @input="update"></textarea>
+		  <div v-html="compiledMarkdown"></div>
+		  <div><p>{{message}}:　{{input}}</p></div>
+		</div>
+	</body>
+	<script src="./main.js"></script>
+</html>
